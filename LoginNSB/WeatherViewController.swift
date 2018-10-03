@@ -15,7 +15,6 @@ class WeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .green
     }
     
     override func loadView() {
@@ -44,7 +43,10 @@ class WeatherView: UIView {
     private func setupViews() {
         self.addSubview(backgroundView)
         self.addSubview(mainStack)
+        mainStack.addArrangedSubview(conditionsImageView)
         mainStack.addArrangedSubview(temperatureLabel)
+        mainStack.addArrangedSubview(cityLabel)
+        mainStack.addArrangedSubview(conditionsLabel)
         mainStack.addArrangedSubview(buttonsStack)
         buttonsStack.addArrangedSubview(celsiusButton)
         buttonsStack.addArrangedSubview(fahrenheitButton)
@@ -59,6 +61,7 @@ class WeatherView: UIView {
     // MARK: - Views
     let backgroundView: UIView = {
         let view = UIView(frame: .zero)
+        view.backgroundColor = .green
         return view
     }()
     
@@ -81,6 +84,32 @@ class WeatherView: UIView {
         return label
     }()
     
+    let cityLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.systemFont(ofSize: 36)
+        label.textColor = .white
+        label.textAlignment = .center
+        label.text = "Amsterdam"
+        return label
+    }()
+    
+    let conditionsLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.textColor = .white
+        label.textAlignment = .center
+        label.text = "Cold"
+        return label
+    }()
+    
+    let conditionsImageView: UIImageView = {
+        let image = UIImage(named: "snow4")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        imageView.widthAnchor.constraint(equalToConstant: image!.size.width).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: image!.size.height).isActive = true
+        return imageView
+    }()
     
     // MARK: - Button
     let celsiusButton: UIButton = {
