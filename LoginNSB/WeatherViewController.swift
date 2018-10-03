@@ -69,9 +69,24 @@ class WeatherView: UIView {
     let temperatureLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 12)
-        label.text = "18"
+        label.text = "18°"
         return label
     }()
+    
+    // MARK: - Button
+    let celsiusButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("°C", for: .normal)
+        return button
+    }()
+    
+    let fahrenheitButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("°F", for: .normal)
+        return button
+    }()
+    
+    
     
     
     
