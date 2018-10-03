@@ -56,6 +56,17 @@ class WeatherView: UIView {
         return view
     }()
     
+    // MARK: - StackView
+    let mainStack: UIStackView = {
+        let stackView = UIStackView(frame: .zero)
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 10
+        return stackView
+    }()
+    
+    
+    
     
 }
 
