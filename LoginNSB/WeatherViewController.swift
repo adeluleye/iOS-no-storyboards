@@ -65,6 +65,13 @@ class WeatherView: UIView {
         return stackView
     }()
     
+    // MARK: - Label
+    let temperatureLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.text = "18"
+        return label
+    }()
     
     
     
