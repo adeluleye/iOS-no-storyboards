@@ -86,6 +86,14 @@ class WeatherView: UIView {
         return button
     }()
     
+    let buttonsStack: UIStackView = {
+        let stackView = UIStackView(frame: .zero)
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 10
+        return stackView
+    }()
+    
     
     
     
