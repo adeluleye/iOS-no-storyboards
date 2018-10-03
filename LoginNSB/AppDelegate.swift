@@ -16,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = WeatherViewController(nibName: nil, bundle: nil)
+        // let presenter = WeatherPresenterImpl()
+        // let rootViewController = WeatherViewController(with: presenter)
+        let rootViewController = LoginViewController(nibName: nil, bundle: nil)
+        
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         

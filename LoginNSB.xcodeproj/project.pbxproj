@@ -13,6 +13,10 @@
 		E995F0482164EFD400AC6504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E995F0462164EFD400AC6504 /* LaunchScreen.storyboard */; };
 		E9B62139216515490036BE95 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B62138216515490036BE95 /* UIView+constraints.swift */; };
 		E9B6213B216540970036BE95 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6213A216540970036BE95 /* WeatherView.swift */; };
+		E9B6213D21655B0F0036BE95 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6213C21655B0F0036BE95 /* WeatherPresenter.swift */; };
+		E9B6213F21655D060036BE95 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6213E21655D060036BE95 /* UIColor+theme.swift */; };
+		E9B62141216585DD0036BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B62140216585DD0036BE95 /* LoginViewController.swift */; };
+		E9B62144216587180036BE95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B62143216587180036BE95 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E995F0492164EFD400AC6504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9B62138216515490036BE95 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		E9B6213A216540970036BE95 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		E9B6213C21655B0F0036BE95 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
+		E9B6213E21655D060036BE95 /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
+		E9B62140216585DD0036BE95 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E9B62143216587180036BE95 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		E995F03C2164EFD300AC6504 /* LoginNSB */ = {
 			isa = PBXGroup;
 			children = (
+				E9B62142216586EA0036BE95 /* Utils */,
 				E995F03D2164EFD300AC6504 /* AppDelegate.swift */,
 				E995F03F2164EFD300AC6504 /* WeatherViewController.swift */,
 				E995F0442164EFD400AC6504 /* Assets.xcassets */,
@@ -63,8 +72,19 @@
 				E995F0492164EFD400AC6504 /* Info.plist */,
 				E9B62138216515490036BE95 /* UIView+constraints.swift */,
 				E9B6213A216540970036BE95 /* WeatherView.swift */,
+				E9B6213C21655B0F0036BE95 /* WeatherPresenter.swift */,
+				E9B6213E21655D060036BE95 /* UIColor+theme.swift */,
+				E9B62140216585DD0036BE95 /* LoginViewController.swift */,
 			);
 			path = LoginNSB;
+			sourceTree = "<group>";
+		};
+		E9B62142216586EA0036BE95 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E9B62143216587180036BE95 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,10 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B62141216585DD0036BE95 /* LoginViewController.swift in Sources */,
+				E9B6213D21655B0F0036BE95 /* WeatherPresenter.swift in Sources */,
 				E995F0402164EFD300AC6504 /* WeatherViewController.swift in Sources */,
 				E9B62139216515490036BE95 /* UIView+constraints.swift in Sources */,
+				E9B6213F21655D060036BE95 /* UIColor+theme.swift in Sources */,
 				E995F03E2164EFD300AC6504 /* AppDelegate.swift in Sources */,
 				E9B6213B216540970036BE95 /* WeatherView.swift in Sources */,
+				E9B62144216587180036BE95 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
