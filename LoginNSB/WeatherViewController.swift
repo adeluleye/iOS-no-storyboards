@@ -42,11 +42,17 @@ class WeatherView: UIView {
     }
     
     private func setupViews() {
-        
+        self.addSubview(backgroundView)
+        self.addSubview(mainStack)
+        mainStack.addArrangedSubview(temperatureLabel)
+        mainStack.addArrangedSubview(buttonsStack)
+        buttonsStack.addArrangedSubview(celsiusButton)
+        buttonsStack.addArrangedSubview(fahrenheitButton)
     }
     
     private func setupConstraints() {
-        
+        mainStack.pinEdges(to: self)
+        backgroundView.pinEdges(to: self)
     }
     
     
@@ -68,21 +74,28 @@ class WeatherView: UIView {
     // MARK: - Label
     let temperatureLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont.systemFont(ofSize: 144)
+        label.textColor = .white
+        label.textAlignment = .center
         label.text = "18°"
         return label
     }()
+    
     
     // MARK: - Button
     let celsiusButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("°C", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 73)
+        button.setTitleColor(.white, for: .normal)
         return button
     }()
     
     let fahrenheitButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("°F", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 73)
+        button.setTitleColor(.white, for: .normal)
         return button
     }()
     
@@ -99,4 +112,3 @@ class WeatherView: UIView {
     
     
 }
-
