@@ -75,6 +75,8 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = GREEN_THEME
         
+        navigationController?.isNavigationBarHidden = true
+        
         setupTextFieldComponents()
         setupLoginButton()
         setupForgotPasswordButton()
