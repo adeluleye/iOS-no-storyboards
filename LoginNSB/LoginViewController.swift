@@ -12,17 +12,25 @@ class LoginViewController: UIViewController {
     
     let emailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Email"
-        textField.textColor = .white
-        textField.backgroundColor = .red
+        
+        let attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSMutableAttributedString.Key.foregroundColor : UIColor.white])
+        
+        textField.attributedPlaceholder = attributedPlaceholder
+        
+        textField.backgroundColor = GREEN_THEME
+        
         return textField
     }()
     
     let passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Password"
-        textField.textColor = .white
-        textField.backgroundColor = .blue
+        
+        let attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        
+        textField.attributedPlaceholder = attributedPlaceholder
+        
+        textField.backgroundColor = GREEN_THEME
+        
         return textField
     }()
     
@@ -32,6 +40,14 @@ class LoginViewController: UIViewController {
         button.setTitle("Log In", for: .normal)
         button.backgroundColor = .purple
         
+        return button
+    }()
+    
+    let forgotPassword: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Forgot Password?", for: .normal)
+        button.backgroundColor = .red
         return button
     }()
     
@@ -55,6 +71,7 @@ class LoginViewController: UIViewController {
         
         setupTextFieldComponents()
         setupLoginButton()
+        setupForgotPasswordButton()
         setupHaveAccountButton()
     }
     
@@ -99,6 +116,17 @@ class LoginViewController: UIViewController {
         loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
+    private func setupForgotPasswordButton() {
+        view.addSubview(forgotPassword)
+        
+        forgotPassword.translatesAutoresizingMaskIntoConstraints = false
+        forgotPassword.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 8).isActive = true
+        forgotPassword.leftAnchor.constraint(equalTo: loginButton.leftAnchor, constant: 0).isActive = true
+        forgotPassword.rightAnchor.constraint(equalTo: loginButton.rightAnchor, constant: 0).isActive = true
+        forgotPassword.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+    }
+    
     private func setupHaveAccountButton() {
         view.addSubview(haveAccountButton)
         
@@ -108,4 +136,5 @@ class LoginViewController: UIViewController {
         haveAccountButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive = true
         haveAccountButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
+    
 }
