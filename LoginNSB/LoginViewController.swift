@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitleColor(.white, for: .normal)
         button.setTitle("Log In", for: .normal)
-        button.backgroundColor = .purple
+        button.backgroundColor = UIColor.rgb(r: 89, g: 156, b: 120)
         
         return button
     }()
