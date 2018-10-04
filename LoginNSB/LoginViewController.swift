@@ -35,12 +35,21 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    let haveAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .yellow
+        let attributedTitle = NSAttributedString(string: "Don't have an account?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = GREEN_THEME
         
         setupTextFieldComponents()
         setupLoginButton()
+        setupHaveAccountButton()
     }
     
     private func setupTextFieldComponents() {
@@ -76,5 +85,15 @@ class LoginViewController: UIViewController {
         loginButton.leftAnchor.constraint(equalTo: passwordTextField.leftAnchor, constant: 0).isActive = true
         loginButton.rightAnchor.constraint(equalTo: passwordTextField.rightAnchor, constant: 0).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    }
+    
+    private func setupHaveAccountButton() {
+        view.addSubview(haveAccountButton)
+        
+        haveAccountButton.translatesAutoresizingMaskIntoConstraints = false
+        haveAccountButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8).isActive = true
+        haveAccountButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive = true
+        haveAccountButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive = true
+        haveAccountButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
 }
