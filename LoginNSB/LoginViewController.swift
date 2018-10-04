@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     }()
     
     let haveAccountButton: UIButton = {
-        let color = UIColor(red: 89/255, green: 156/255, blue: 120/255, alpha: 1)
+        let color = UIColor.rgb(r: 89, g: 156, b: 120)
         let font = UIFont.systemFont(ofSize: 16)
         
         let button = UIButton(type: .system)

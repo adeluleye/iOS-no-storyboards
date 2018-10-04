@@ -8,6 +8,12 @@
 
 import UIKit
 
+extension UIColor {
+    static func rgb(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor {
+        return UIColor(displayP3Red: r/255, green: g/255, blue: b/255, alpha: 1)
+    }
+}
+
 extension UIView {
     func anchors(top: NSLayoutYAxisAnchor?, topPad: CGFloat, bottom: NSLayoutYAxisAnchor?, bottomPad: CGFloat, left: NSLayoutXAxisAnchor?, leftPad: CGFloat, right: NSLayoutXAxisAnchor?, rightPad: CGFloat, height: CGFloat, width: CGFloat) {
         
