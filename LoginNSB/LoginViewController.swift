@@ -49,6 +49,12 @@ class LoginViewController: UIViewController {
     }
     
     private func setupPasswordField() {
+        view.addSubview(passwordTextField)
         
+        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 8).isActive = true
+        passwordTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 24).isActive = true
+        passwordTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -24).isActive = true
+        passwordTextField.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
 }
