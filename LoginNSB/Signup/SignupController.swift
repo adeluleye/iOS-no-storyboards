@@ -33,6 +33,10 @@ class SignupController: UIViewController {
         setupHaveAccountButton()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @objc func signInAction() {
         navigationController?.popViewController(animated: true)
     }
