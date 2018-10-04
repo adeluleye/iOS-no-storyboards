@@ -46,6 +46,15 @@ class LoginController: UIViewController {
         return button
     }()
     
+    let logo: UIImageView = {
+        let image = UIImage(named: "icon")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 20
+        return imageView
+    }()
+    
     let forgotPassword: UIButton = {
         let button = UIButton(type: .system)
         button.setTitleColor(.white, for: .normal)
@@ -76,6 +85,7 @@ class LoginController: UIViewController {
         
         navigationController?.isNavigationBarHidden = true
         
+        setupLogo()
         setupTextFieldComponents()
         setupLoginButton()
         setupForgotPasswordButton()
@@ -89,6 +99,14 @@ class LoginController: UIViewController {
     @objc func signupAction() {
         let signupController = SignupController()
         navigationController?.pushViewController(signupController, animated: true)
+    }
+    
+    private func setupLogo() {
+        view.addSubview(logo)
+        
+        logo.anchors(top: view.safeAreaLayoutGuide.topAnchor, topPad: 64, bottom: nil, bottomPad: 0, left: nil, leftPad: 0, right: nil, rightPad: 0, height: 150, width: 150)
+        
+        logo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
     private func setupTextFieldComponents() {
