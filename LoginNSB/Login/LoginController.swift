@@ -86,7 +86,8 @@ class LoginController: UIViewController {
     }
     
     @objc func signupAction() {
-        print("LETS SIGN UP")
+        let signupController = SignupController()
+        navigationController?.pushViewController(signupController, animated: true)
     }
     
     private func setupTextFieldComponents() {
