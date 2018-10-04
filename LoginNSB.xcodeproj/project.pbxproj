@@ -15,9 +15,10 @@
 		E9B6213B216540970036BE95 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6213A216540970036BE95 /* WeatherView.swift */; };
 		E9B6213D21655B0F0036BE95 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6213C21655B0F0036BE95 /* WeatherPresenter.swift */; };
 		E9B6213F21655D060036BE95 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6213E21655D060036BE95 /* UIColor+theme.swift */; };
-		E9B62141216585DD0036BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B62140216585DD0036BE95 /* LoginViewController.swift */; };
+		E9B62141216585DD0036BE95 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B62140216585DD0036BE95 /* LoginController.swift */; };
 		E9B62144216587180036BE95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B62143216587180036BE95 /* Constants.swift */; };
 		E9B621462165A3B20036BE95 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B621452165A3B20036BE95 /* Extensions.swift */; };
+		E9B6214A21662E8E0036BE95 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6214921662E8E0036BE95 /* SignupController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +32,10 @@
 		E9B6213A216540970036BE95 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		E9B6213C21655B0F0036BE95 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
 		E9B6213E21655D060036BE95 /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
-		E9B62140216585DD0036BE95 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E9B62140216585DD0036BE95 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E9B62143216587180036BE95 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9B621452165A3B20036BE95 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E9B6214921662E8E0036BE95 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,8 @@
 		E995F03C2164EFD300AC6504 /* LoginNSB */ = {
 			isa = PBXGroup;
 			children = (
+				E9B6214821662E330036BE95 /* Signup */,
+				E9B6214721662E150036BE95 /* Login */,
 				E9B62142216586EA0036BE95 /* Utils */,
 				E995F03D2164EFD300AC6504 /* AppDelegate.swift */,
 				E995F03F2164EFD300AC6504 /* WeatherViewController.swift */,
@@ -76,7 +80,6 @@
 				E9B6213A216540970036BE95 /* WeatherView.swift */,
 				E9B6213C21655B0F0036BE95 /* WeatherPresenter.swift */,
 				E9B6213E21655D060036BE95 /* UIColor+theme.swift */,
-				E9B62140216585DD0036BE95 /* LoginViewController.swift */,
 			);
 			path = LoginNSB;
 			sourceTree = "<group>";
@@ -88,6 +91,22 @@
 				E9B621452165A3B20036BE95 /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E9B6214721662E150036BE95 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E9B62140216585DD0036BE95 /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E9B6214821662E330036BE95 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				E9B6214921662E8E0036BE95 /* SignupController.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9B62141216585DD0036BE95 /* LoginViewController.swift in Sources */,
+				E9B62141216585DD0036BE95 /* LoginController.swift in Sources */,
 				E9B621462165A3B20036BE95 /* Extensions.swift in Sources */,
 				E9B6213D21655B0F0036BE95 /* WeatherPresenter.swift in Sources */,
+				E9B6214A21662E8E0036BE95 /* SignupController.swift in Sources */,
 				E995F0402164EFD300AC6504 /* WeatherViewController.swift in Sources */,
 				E9B62139216515490036BE95 /* UIView+constraints.swift in Sources */,
 				E9B6213F21655D060036BE95 /* UIColor+theme.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginController: UIViewController {
     
     let emailTextField: UITextField = {
         let textField = UITextField()
@@ -65,6 +65,8 @@ class LoginViewController: UIViewController {
         
         attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: font]))
         
+        button.addTarget(self, action: #selector(signupAction), for: .touchUpInside)
+        
         button.setAttributedTitle(attributedTitle, for: .normal)
         return button
     }()
@@ -81,6 +83,10 @@ class LoginViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    @objc func signupAction() {
+        print("LETS SIGN UP")
     }
     
     private func setupTextFieldComponents() {

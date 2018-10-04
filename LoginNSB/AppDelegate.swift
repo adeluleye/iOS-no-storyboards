@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         // let presenter = WeatherPresenterImpl()
         // let rootViewController = WeatherViewController(with: presenter)
-        let rootViewController = LoginViewController(nibName: nil, bundle: nil)
+        let rootViewController = LoginController(nibName: nil, bundle: nil)
         
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
