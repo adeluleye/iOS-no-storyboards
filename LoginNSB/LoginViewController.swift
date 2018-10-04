@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitleColor(.white, for: .normal)
         button.setTitle("Forgot Password?", for: .normal)
-        button.backgroundColor = .red
+        button.backgroundColor = GREEN_THEME
         return button
     }()
     
@@ -87,11 +87,12 @@ class LoginViewController: UIViewController {
     private func setupEmailField() {
         view.addSubview(emailTextField)
         
-        emailTextField.translatesAutoresizingMaskIntoConstraints = false
-        
-        emailTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 24).isActive = true
-        emailTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -24).isActive = true
-        emailTextField.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        emailTextField.anchors(top: nil, topPad: 0,
+                               bottom: nil, bottomPad: 0,
+                               left: view.leftAnchor, leftPad: 24,
+                               right: view.rightAnchor, rightPad: 24,
+                               height: 30,
+                               width: 0)
         
         emailTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
@@ -99,42 +100,29 @@ class LoginViewController: UIViewController {
     private func setupPasswordField() {
         view.addSubview(passwordTextField)
         
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 8).isActive = true
-        passwordTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 24).isActive = true
-        passwordTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -24).isActive = true
-        passwordTextField.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        passwordTextField.anchors(top: emailTextField.bottomAnchor, topPad: 8, bottom: nil, bottomPad: 0, left: emailTextField.leftAnchor, leftPad: 0, right: emailTextField.rightAnchor, rightPad: 0, height: 30, width: 0)
+        
     }
     
     private func setupLoginButton() {
         view.addSubview(loginButton)
         
-        loginButton.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 8).isActive = true
-        loginButton.leftAnchor.constraint(equalTo: passwordTextField.leftAnchor, constant: 0).isActive = true
-        loginButton.rightAnchor.constraint(equalTo: passwordTextField.rightAnchor, constant: 0).isActive = true
-        loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        loginButton.anchors(top: passwordTextField.bottomAnchor, topPad: 8, bottom: nil, bottomPad: 0, left: passwordTextField.leftAnchor, leftPad: 0, right: passwordTextField.rightAnchor, rightPad: 0, height: 50, width: 0)
+        
     }
     
     private func setupForgotPasswordButton() {
         view.addSubview(forgotPassword)
         
-        forgotPassword.translatesAutoresizingMaskIntoConstraints = false
-        forgotPassword.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 8).isActive = true
-        forgotPassword.leftAnchor.constraint(equalTo: loginButton.leftAnchor, constant: 0).isActive = true
-        forgotPassword.rightAnchor.constraint(equalTo: loginButton.rightAnchor, constant: 0).isActive = true
-        forgotPassword.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        forgotPassword.anchors(top: loginButton.bottomAnchor, topPad: 8, bottom: nil, bottomPad: 0, left: loginButton.leftAnchor, leftPad: 0, right: loginButton.rightAnchor, rightPad: 0, height: 30, width: 0)
         
     }
     
     private func setupHaveAccountButton() {
         view.addSubview(haveAccountButton)
         
-        haveAccountButton.translatesAutoresizingMaskIntoConstraints = false
-        haveAccountButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8).isActive = true
-        haveAccountButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive = true
-        haveAccountButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive = true
-        haveAccountButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        haveAccountButton.anchors(top: nil, topPad: 0, bottom: view.safeAreaLayoutGuide.bottomAnchor, bottomPad: 8, left: view.leftAnchor, leftPad: 12, right: view.rightAnchor, rightPad: 12, height: 30, width: 0)
+        
     }
     
 }

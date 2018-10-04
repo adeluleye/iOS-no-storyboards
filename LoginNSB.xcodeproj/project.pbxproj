@@ -17,6 +17,7 @@
 		E9B6213F21655D060036BE95 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6213E21655D060036BE95 /* UIColor+theme.swift */; };
 		E9B62141216585DD0036BE95 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B62140216585DD0036BE95 /* LoginViewController.swift */; };
 		E9B62144216587180036BE95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B62143216587180036BE95 /* Constants.swift */; };
+		E9B621462165A3B20036BE95 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B621452165A3B20036BE95 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E9B6213E21655D060036BE95 /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
 		E9B62140216585DD0036BE95 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E9B62143216587180036BE95 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E9B621452165A3B20036BE95 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B62143216587180036BE95 /* Constants.swift */,
+				E9B621452165A3B20036BE95 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B62141216585DD0036BE95 /* LoginViewController.swift in Sources */,
+				E9B621462165A3B20036BE95 /* Extensions.swift in Sources */,
 				E9B6213D21655B0F0036BE95 /* WeatherPresenter.swift in Sources */,
 				E995F0402164EFD300AC6504 /* WeatherViewController.swift in Sources */,
 				E9B62139216515490036BE95 /* UIView+constraints.swift in Sources */,
