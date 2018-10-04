@@ -40,6 +40,7 @@ class LoginController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitleColor(.white, for: .normal)
         button.setTitle("Log In", for: .normal)
+        button.layer.cornerRadius = 10
         button.backgroundColor = UIColor.rgb(r: 89, g: 156, b: 120)
         
         return button
@@ -118,7 +119,7 @@ class LoginController: UIViewController {
     private func setupLoginButton() {
         view.addSubview(loginButton)
         
-        loginButton.anchors(top: passwordTextField.bottomAnchor, topPad: 8, bottom: nil, bottomPad: 0, left: passwordTextField.leftAnchor, leftPad: 0, right: passwordTextField.rightAnchor, rightPad: 0, height: 50, width: 0)
+        loginButton.anchors(top: passwordTextField.bottomAnchor, topPad: 12, bottom: nil, bottomPad: 0, left: passwordTextField.leftAnchor, leftPad: 0, right: passwordTextField.rightAnchor, rightPad: 0, height: 50, width: 0)
         
     }
     
