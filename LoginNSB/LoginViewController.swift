@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
         
         textField.attributedPlaceholder = attributedPlaceholder
         
+        textField.textColor = .white
         textField.backgroundColor = GREEN_THEME
         
         return textField
@@ -29,7 +30,10 @@ class LoginViewController: UIViewController {
         
         textField.attributedPlaceholder = attributedPlaceholder
         
+        textField.textColor = .white
         textField.backgroundColor = GREEN_THEME
+        
+        textField.isSecureTextEntry = true
         
         return textField
     }()
