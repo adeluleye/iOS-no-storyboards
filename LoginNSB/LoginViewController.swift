@@ -52,6 +52,10 @@ class LoginViewController: UIViewController {
         setupHaveAccountButton()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     private func setupTextFieldComponents() {
         setupEmailField()
         setupPasswordField()
